@@ -1,0 +1,57 @@
+﻿//USEUNIT TestLog_Function
+//USEUNIT DDT_ExcelDriver
+
+function Login()
+{
+  
+  TestLog_Function["StartLogging"]("Step 1: Open browser and go to application URL")
+    Browsers["Item"](btChrome)["Run"]("https://cafetownsend-angular-rails.herokuapp.com/login");
+  TestLog_Function["StopLogging"]()
+  
+  TestLog_Function["StartLogging"]("Search for parent object")
+    parent = Sys["Browser"]("chrome")["Page"]("https://cafetownsend-angular-rails.herokuapp.com/login")
+  TestLog_Function["StopLogging"]()
+  
+  TestLog_Function["StartLogging"]("Step 2: Enter value in User Name field.")    
+    var userName_Prop, userName_Value, userName
+    userName_Prop = new Array("ObjectLabel","ObjectType")
+    userName_Value = new Array("Username* Required!","Textbox")
+    userName = parent["FindChild"](userName_Prop,userName_Value,500 )
+        if (userName["Exists"])
+        { 
+          userName["Click"]()
+          userName["Keys"](DDT["CurrentDriver"]["Value"]("username"))
+          //userName["Keys"]("Luke")
+        }
+      else
+      {
+        Log["Error"]("User Name field does not exists.")
+      }
+  TestLog_Function["StopLogging"]()
+
+  TestLog_Function["StartLogging"]("Step 3: Enter value in Password field.")
+    var password_Prop, password_Value, password
+    password_Prop = new Array("ObjectLabel","ObjectType")
+    password_Value = new Array("Password*","PasswordBox")
+    password = parent["FindChild"](password_Prop,password_Value,500 )
+    if (password["Exists"])
+        { 
+          password["Click"]()
+          password["Keys"](DDT["CurrentDriver"]["Value"]("password"))
+          //password["Keys"]("Skywalker")
+        }
+    else
+        {
+          Log["Error"]("Password field does not exists.")
+        }
+  TestLog_Function["StopLogging"]()
+  
+  TestLog_Function["StartLogging"]("Step 4: Click on Login Button")
+    var loginButton_Prop, loginButton_Value, loginButton
+    loginButton_Prop = new Array("ObjectLabel","ObjectType")
+    loginButton_Value = new Array("Login","Button")
+    loginButton = parent["FindChild"](loginButton_Prop,loginButton_Value,500 )
+    loginButton["Click"]()
+  TestLog_Function["StopLogging"]()
+  
+}

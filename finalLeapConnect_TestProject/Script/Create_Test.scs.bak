@@ -1,0 +1,68 @@
+﻿//USEUNIT TestLog_Function
+//USEUNIT DDT_ExcelDriver
+
+function Create_Test()
+{
+  
+  parent = Sys["Browser"]("chrome")["Page"]("https://cafetownsend-angular-rails.herokuapp.com/employees")
+  parent["Wait"]()
+  
+  TestLog_Function["StartLogging"]("Step 1: Press \"Create\" button.")
+    var createTest_Prop, createTest_Value, createTest
+    createTest_Prop = new Array("ObjectIdentifier","ObjectType")
+    createTest_Value = new Array("bAdd","Link")
+    createTest = parent["FindChild"](createTest_Prop,createTest_Value,500)
+    createTest["Click"]()
+  TestLog_Function["StopLogging"]()
+
+  TestLog_Function["StartLogging"]("Step 2: Enter value in \"First Name\" text-field.")
+    var firstName_Prop, firstName_Value, firstName
+    firstName_Prop = new Array("ObjectLabel","ObjectType")
+    firstName_Value = new Array("First name:","Textbox")
+    firstName = parent["FindChild"](firstName_Prop,firstName_Value,500 )
+    firstName["Click"]()
+    firstName["Keys"](DDT["CurrentDriver"]["Value"]("firstname"))
+    //firstName["Keys"]("Hello")
+  TestLog_Function["StopLogging"]()
+  
+  TestLog_Function["StartLogging"]("Step 3: Enter value in \"Last Name\" text-field.")
+    var lastName_Prop, lastName_Value, startDatelastName
+    lastName_Prop = new Array("ObjectLabel","ObjectType")
+    lastName_Value = new Array("Last name:","Textbox")
+    lastName = parent["FindChild"](lastName_Prop,lastName_Value,500 )
+    lastName["Click"]()
+    lastName["Keys"](DDT["CurrentDriver"]["Value"]("lastName"))
+    //lastName["Keys"]("World")
+  TestLog_Function["StopLogging"]()
+
+  TestLog_Function["StartLogging"]("Step 4: Enter value in \"Start Date\" date-field.")
+    var startDate_Prop, startDate_Value, startDate
+    startDate_Prop = new Array("ObjectLabel","ObjectType")
+    startDate_Value = new Array("Start date:","Textbox")
+    startDate = parent["FindChild"](startDate_Prop,startDate_Value,500 )
+    startDate["Click"]()
+    startDate["Keys"](DDT["CurrentDriver"]["Value"]("startdate"))
+    //startDate["Keys"]("2020-01-01")
+  TestLog_Function["StopLogging"]()
+  
+  TestLog_Function["StartLogging"]("Step 4: Enter value in \"Email\" email-field.")
+    var email_Prop, email_Value, email
+    email_Prop = new Array("ObjectLabel","ObjectType")
+    email_Value = new Array("Email:","EmailInput")
+    email = parent["FindChild"](email_Prop,email_Value,500 )
+    email["Click"]()
+    email["Keys"](DDT["CurrentDriver"]["Value"]("email"))
+    //email["Keys"]("lub-tree@hotmail.com")
+  TestLog_Function["StopLogging"]()
+  
+  TestLog_Function["StartLogging"]("Step 5: Press \"Add\" button.")
+    var add_Prop, add_Value, add
+    add_Prop = new Array("ObjectLabel","ObjectType")
+    add_Value = new Array("Add","Button")
+    add = parent["FindChild"](add_Prop,add_Value,500 )
+    add["Click"]()
+  TestLog_Function["StopLogging"]()
+  
+  
+
+}

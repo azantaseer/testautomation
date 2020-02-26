@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="folders"/>
+		<Node name="logs">
+			<Node name="log idx=0000">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43887.6350454167"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{6571F7BB-0AD9-4A98-8E8F-4C667E5E87C7}"/>
+				<Prp name="nameofroot" type="S" value="Execute Tests"/>
+				<Prp name="relpath" type="S" value="26-Feb-20_3_14 PM_27_924\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0001">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43887.6383472685"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{33BC1980-FE12-45AD-A7CB-AC6DDCC6F21E}"/>
+				<Prp name="nameofroot" type="S" value="Execute Tests"/>
+				<Prp name="relpath" type="S" value="26-Feb-20_3_19 PM_13_204\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0002">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="43887.6405891319"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{AC051DF7-3C1F-433E-87E5-26325C4707FD}"/>
+				<Prp name="nameofroot" type="S" value="Execute Tests"/>
+				<Prp name="relpath" type="S" value="26-Feb-20_3_22 PM_26_901\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{681DCC69-A39F-4C4D-8E7D-B2D9362FAF4F}"/>
+		<Prp name="version" type="S" value="11.0"/>
+	</Node>
+</Nodes>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="log data">
+			<Node name="row2">
+				<Prp name="status" type="I" value="0"/>
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="end time" type="D" value="43887.6388346644"/>
+				<Prp name="name" type="S" value="Verify [Script\VerifyTest - VerifyTest]"/>
+				<Prp name="extended message" type="S" value=""/>
+				<Prp name="start time" type="D" value="43887.63882125"/>
+				<Prp name="details" type="S" value="{65F7142D-8518-4CBF-B428-690BC024E618}"/>
+				<Prp name="ownerid" type="I" value="-1"/>
+				<Prp name="testdata item" type="B" value="0"/>
+			</Node>
+			<Node name="row1">
+				<Prp name="status" type="I" value="0"/>
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="end time" type="D" value="43887.6388211343"/>
+				<Prp name="name" type="S" value="CreateTest [Script\DDT_ExcelDriver - DDT_ExcelDriver]"/>
+				<Prp name="extended message" type="S" value=""/>
+				<Prp name="start time" type="D" value="43887.6386147338"/>
+				<Prp name="details" type="S" value="{BFC669F9-9527-44FA-954E-404863592E37}"/>
+				<Prp name="ownerid" type="I" value="-1"/>
+				<Prp name="testdata item" type="B" value="0"/>
+			</Node>
+			<Node name="row0">
+				<Prp name="status" type="I" value="0"/>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="end time" type="D" value="43887.6386146065"/>
+				<Prp name="name" type="S" value="Login [Script\DDT_ExcelDriver - DDT_ExcelDriver]"/>
+				<Prp name="extended message" type="S" value=""/>
+				<Prp name="start time" type="D" value="43887.6383916667"/>
+				<Prp name="details" type="S" value="{F194E118-E942-49D3-9176-38B7527CBB43}"/>
+				<Prp name="ownerid" type="I" value="-1"/>
+				<Prp name="testdata item" type="B" value="0"/>
+			</Node>
+		</Node>
+	</Node>
+</Nodes>

@@ -1,0 +1,32 @@
+﻿//USEUNIT TestLog_Function
+
+function VerifyTest()
+{
+  parent = Sys["Browser"]("chrome")["Page"]("https://cafetownsend-angular-rails.herokuapp.com/employees")
+  parent["Wait"]()
+  expectedValue = "Azan Taseer" 
+  TestLog_Function["StartLogging"]("Step 1: Find \"List Container\"")
+    var listContainer_Prop, listContainer_Value, listContainer
+    listContainer_Prop = new Array("ObjectIdentifier","ObjectType")
+    listContainer_Value = new Array("employee_list_container","Panel")
+    listContainer = parent["FindChild"](listContainer_Prop,listContainer_Value,500)
+  TestLog_Function["StopLogging"]()
+
+
+  TestLog_Function["StartLogging"]("Step 2: Verify expected value against actual value.")
+    var actualValue_Prop, actualValue_Value, actualValue
+    actualValue_Prop = new Array("contentText","ObjectType")
+    actualValue_Value = new Array(expectedValue,"TextNode")
+    actualValue = listContainer["FindChild"](actualValue_Prop,actualValue_Value, 500)
+  
+    if (actualValue["Exists"])
+    {
+      Log["Message"]("Expected Value: "+expectedValue +" is equal to " +" Actual Value: "+actualValue["contentText"])
+    }
+    else
+    {
+      Log["Errors"]("Expected Value:"+expectedValue +"is not equal to" +"Actual Value:"+actualValue["contentText"])
+    }
+  TestLog_Function["StopLogging"]()
+
+}

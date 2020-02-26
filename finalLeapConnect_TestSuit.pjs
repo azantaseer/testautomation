@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="14.0" key="{F8358323-EFA0-4731-B005-2ECDC8D57454}">
+	<children>
+		<child name="finalLeapConnect_TestProject" key="{098A85BD-D032-49AD-AB4E-91F82BE87871}" path="finalLeapConnect_TestProject\finalLeapConnect_TestProject.mds" />
+	</children>
+	<testItems key="{BBDF22E7-B22E-4FB3-9C35-47B29086D9BD}">
+		<children>
+			<testItem key="{098A85BD-D032-49AD-AB4E-91F82BE87871}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{F4FCB2E2-FC38-419E-9B7C-AC63107E8CD4}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{C4733093-CDF1-4ADC-AE78-982C22C043D1}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}">
+		<CrossBrowserTesting Enable="True" />
+	</extender>
+</Root>

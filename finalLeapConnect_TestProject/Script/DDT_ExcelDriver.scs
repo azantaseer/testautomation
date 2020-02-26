@@ -1,0 +1,6 @@
+﻿function DDT_ExcelDriver(Path,Sheet,Unit)
+{
+  DDT["ExcelDriver"](Path,Sheet)
+  DDT["CurrentDriver"]["DriveMethod"](Unit)
+}
+

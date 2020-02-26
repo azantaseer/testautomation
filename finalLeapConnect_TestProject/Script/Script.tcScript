@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<child name="Login" key="{6D0E910D-B382-4795-BFB8-FD8C4838F5CE}" path="Login.scs" />
+		<child name="TestLog_Function" key="{54B14D80-0EEA-4FC5-8998-5AB74F967615}" path="TestLog_Function.scs" />
+		<child name="Create_Test" key="{0CA6BE50-66D1-46F0-9902-B8E819DA92FC}" path="Create_Test.scs" />
+		<child name="VerifyTest" key="{2EF3139F-A77C-4064-B498-FB7F8CA5097D}" path="VerifyTest.scs" />
+		<child name="DDT_ExcelDriver" key="{326DCE33-6A17-453E-BE05-CA403B4D222E}" path="DDT_ExcelDriver.scs" />
+	</children>
+</Root>

@@ -1,0 +1,19 @@
+﻿function StartLogging(Message)
+{
+  try{
+    FolderName = Log["CreateFolder"](Message);
+    Log["PushLogFolder"](FolderName);
+  }catch(e){
+    Log["Error"](e.description);  
+  }
+}
+
+
+function StopLogging()
+{
+  try{
+    Log["PopLogFolder"]();
+  }catch(e){
+    Log["Error"](e.description); 
+  }
+}
